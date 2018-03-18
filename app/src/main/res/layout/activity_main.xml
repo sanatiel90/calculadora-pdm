@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sanatiel.calculadora.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/bt7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_marginTop="15dp"
+            android:text="@string/bt7"
+            tools:text="@string/bt7" />
+
+        <Button
+            android:id="@+id/bt8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/bt7"
+            android:text="@string/bt8"
+            tools:text="@string/bt8" />
+
+        <Button
+            android:id="@+id/bt9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/bt8"
+            android:text="@string/bt9" />
+
+        <Button
+            android:id="@+id/btClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/bt9"
+            android:text="@string/btClear" />
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt7"
+            android:layout_marginTop="10dp"
+            android:text="@string/bt4" />
+
+        <Button
+            android:id="@+id/bt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt9"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt5"
+            android:text="@string/bt6" />
+
+        <Button
+            android:id="@+id/bt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt8"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt4"
+            android:text="@string/bt5" />
+
+        <Button
+            android:id="@+id/btSoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btClear"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt6"
+            android:text="@string/btSoma" />
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt4"
+            android:layout_marginTop="10dp"
+            android:text="@string/bt1" />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt5"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt1"
+            android:text="@string/bt2" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt6"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt2"
+            android:text="@string/bt3" />
+
+        <Button
+            android:id="@+id/btSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btSoma"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt3"
+            android:text="@string/btSub" />
+
+        <Button
+            android:id="@+id/bt0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt2"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/btAux"
+            android:text="@string/bt0" />
+
+        <Button
+            android:id="@+id/btMult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt3"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/bt0"
+            android:text="@string/btMult" />
+
+        <Button
+            android:id="@+id/btDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btSub"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/btMult"
+            android:text="@string/btDiv" />
+
+        <Button
+            android:id="@+id/btAux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt1"
+            android:layout_marginTop="10dp"
+            android:text="@string/btAux" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
