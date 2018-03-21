@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBack"
     tools:context="com.example.sanatiel.calculadora.MainActivity">
 
     <RelativeLayout
@@ -17,16 +18,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:enabled="false"
+            android:textColor="@color/editTxtFont"
             android:gravity="right"
             android:layout_alignParentTop="true"
             android:layout_marginTop="22dp"
+            android:textSize="@dimen/editTxtFont"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/bt7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@+id/editText"
             android:layout_marginTop="15dp"
             android:text="@string/bt7"
@@ -35,8 +40,9 @@
         <Button
             android:id="@+id/bt8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
             android:layout_below="@id/editText"
+            android:textSize="@dimen/btFontSize"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/bt7"
             android:text="@string/bt8"
@@ -45,7 +51,8 @@
         <Button
             android:id="@+id/bt9"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/editText"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/bt8"
@@ -54,7 +61,9 @@
         <Button
             android:id="@+id/btClear"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
+
             android:layout_alignParentRight="true"
             android:layout_below="@id/editText"
             android:layout_marginTop="15dp"
@@ -64,7 +73,8 @@
         <Button
             android:id="@+id/bt4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt7"
             android:layout_marginTop="10dp"
             android:text="@string/bt4" />
@@ -72,7 +82,8 @@
         <Button
             android:id="@+id/bt6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt9"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/bt5"
@@ -81,7 +92,8 @@
         <Button
             android:id="@+id/bt5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt8"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/bt4"
@@ -90,7 +102,8 @@
         <Button
             android:id="@+id/btSoma"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_alignParentRight="true"
             android:layout_below="@id/btClear"
             android:layout_marginTop="10dp"
@@ -100,7 +113,8 @@
         <Button
             android:id="@+id/bt1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt4"
             android:layout_marginTop="10dp"
             android:text="@string/bt1" />
@@ -108,7 +122,8 @@
         <Button
             android:id="@+id/bt2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt5"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/bt1"
@@ -117,7 +132,8 @@
         <Button
             android:id="@+id/bt3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt6"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/bt2"
@@ -126,7 +142,8 @@
         <Button
             android:id="@+id/btSub"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_alignParentRight="true"
             android:layout_below="@id/btSoma"
             android:layout_marginTop="10dp"
@@ -136,7 +153,8 @@
         <Button
             android:id="@+id/bt0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt2"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/btAux"
@@ -145,7 +163,8 @@
         <Button
             android:id="@+id/btMult"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt3"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/bt0"
@@ -154,7 +173,8 @@
         <Button
             android:id="@+id/btDiv"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_alignParentRight="true"
             android:layout_below="@id/btSub"
             android:layout_marginTop="10dp"
@@ -164,10 +184,22 @@
         <Button
             android:id="@+id/btAux"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+            android:layout_height="@dimen/btHeight"
+            android:textSize="@dimen/btFontSize"
             android:layout_below="@id/bt1"
             android:layout_marginTop="10dp"
             android:text="@string/btAux" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btDiv"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="36dp"
+            android:text="Sanatiel Barros" />
 
     </RelativeLayout>
 

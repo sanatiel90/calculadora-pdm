@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btHeight">65dp</dimen>
+    <dimen name="btFontSize">25dp</dimen>
+    <dimen name="editTxtFont">30dp</dimen>
+
+</resources>
