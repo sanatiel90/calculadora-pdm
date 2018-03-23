@@ -9,5 +9,6 @@
     <color name="btClearFont">#EEEEEE</color>
     <color name="btAux">#558B2F</color>
     <color name="btAuxFont">#EEEEEE</color>
+    <color name="txtCalculo">#EEEEEE</color>
 
 </resources>

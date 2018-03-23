@@ -16,6 +16,7 @@
     <string name="btSub">-</string>
     <string name="btAux">=</string>
     <string name="btClear">CE</string>
+    <string name="txtCalc"></string>
 
 
 </resources>

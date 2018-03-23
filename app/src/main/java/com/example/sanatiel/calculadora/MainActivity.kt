@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+
 //import kotlinx.android.synthetic.main.activity_main.* //BUG
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         var numeroAtual:Int = 0
         var numeroNovo:Int = 0
         var resultado:Boolean = false
+        var strCalculo = ""
 
        /* findViewById<Button>(R.id.bt9).setOnClickListener { show() }
         bt8.setOnClickListener { Toast.makeText(this,"ocho",Toast.LENGTH_LONG).show() }
@@ -42,46 +45,67 @@ class MainActivity : AppCompatActivity() {
         val btClear = findViewById<Button>(R.id.btClear)
         val btAux = findViewById<Button>(R.id.btAux)
         val edTxt = findViewById<EditText>(R.id.editText)
+        val txtCalc = findViewById<TextView>(R.id.txtCalculo)
 
         bt1.setOnClickListener {
             edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt1)))  //informa o num atual do edit text mais o numero 1
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt1))
+            txtCalc.setText(strCalculo)
         }
 
         bt2.setOnClickListener {
             edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt2)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt2))
+            txtCalc.setText(strCalculo)
         }
 
 
         bt3.setOnClickListener {
              edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt3)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt3))
+            txtCalc.setText(strCalculo)
         }
 
         bt4.setOnClickListener {
             edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt4)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt4))
+            txtCalc.setText(strCalculo)
         }
 
         bt5.setOnClickListener {
                edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt5)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt5))
+            txtCalc.setText(strCalculo)
         }
 
         bt6.setOnClickListener {
-               edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt6)))
+                edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt6)))
+                strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt6))
+                txtCalc.setText(strCalculo)
         }
 
         bt7.setOnClickListener {
               edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt7)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt7))
+            txtCalc.setText(strCalculo)
         }
 
         bt8.setOnClickListener {
                edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt8)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt8))
+            txtCalc.setText(strCalculo)
         }
 
         bt9.setOnClickListener {
              edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt9)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt9))
+            txtCalc.setText(strCalculo)
         }
 
         bt0.setOnClickListener {
               edTxt.setText(atribuiNumero(edTxt.text.toString(), getString(R.string.bt0)))
+            strCalculo = atualizaTxtCalculo(strCalculo,"",getString(R.string.bt0))
+            txtCalc.setText(strCalculo)
         }
 
         btSoma.setOnClickListener {
@@ -93,6 +117,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 operador = "+"
                 edTxt.setText("")
+
+                strCalculo = atualizaTxtCalculo(strCalculo," ",getString(R.string.btSoma))
+                txtCalc.setText(strCalculo)
             }catch (ex: NumberFormatException){
                 Toast.makeText(this,"Operação inválida",Toast.LENGTH_SHORT).show()
                 btClear.callOnClick()
@@ -110,6 +137,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 operador = "*"
                 edTxt.setText("")
+
+                strCalculo = atualizaTxtCalculo(strCalculo," ",getString(R.string.btMult))
+                txtCalc.setText(strCalculo)
             }catch (ex: NumberFormatException){
                 Toast.makeText(this,"Operação inválida",Toast.LENGTH_SHORT).show()
                 btClear.callOnClick()
@@ -127,6 +157,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 operador = "-"
                 edTxt.setText("")
+
+                strCalculo = atualizaTxtCalculo(strCalculo," ",getString(R.string.btSub))
+                txtCalc.setText(strCalculo)
             }catch (ex: NumberFormatException){
                 Toast.makeText(this,"Operação inválida",Toast.LENGTH_SHORT).show()
                 btClear.callOnClick()
@@ -144,6 +177,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 operador = "/"
                 edTxt.setText("")
+
+                strCalculo = atualizaTxtCalculo(strCalculo," ",getString(R.string.btDiv))
+                txtCalc.setText(strCalculo)
             }catch (ex: NumberFormatException){
                 Toast.makeText(this,"Operação inválida",Toast.LENGTH_SHORT).show()
                 btClear.callOnClick()
@@ -158,6 +194,12 @@ class MainActivity : AppCompatActivity() {
              numeroAtual = calculaOperacao(operador,numeroAtual,Integer.parseInt(edTxt.text.toString()))
              edTxt.setText(numeroAtual.toString())
              resultado = true
+
+             strCalculo = atualizaTxtCalculo(strCalculo," ",getString(R.string.btAux))
+             txtCalc.setText(strCalculo)
+             strCalculo = atualizaTxtCalculo(strCalculo,"",numeroAtual.toString())
+             txtCalc.setText(strCalculo)
+
            }catch (ex: NumberFormatException){
                 Toast.makeText(this,"Operação inválida",Toast.LENGTH_SHORT).show()
                 btClear.callOnClick()
@@ -171,6 +213,8 @@ class MainActivity : AppCompatActivity() {
             edTxt.setText("")
             numeroAtual = 0
             resultado = false
+            strCalculo = ""
+            txtCalc.setText(strCalculo)
         }
 
     }
@@ -197,6 +241,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    fun atualizaTxtCalculo(valorAtual:String,espaco:String? = "",  valorNovo:String):String{
+
+        if (valorAtual != null) return valorAtual + espaco + valorNovo + espaco else return valorNovo
+    }
 
     }
 
