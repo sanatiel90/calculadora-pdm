@@ -3,7 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="novoTema">#212121</color>
     <color name="editTxtFont">#EEEEEE</color>
+    <color name="editTxtBack">#37474F</color>
     <color name="colorBack">#424242</color>
     <color name="btClear">#FF3D00</color>
     <color name="btClearFont">#EEEEEE</color>
