@@ -17,24 +17,31 @@
         android:padding="16dp">
 
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
+            android:id="@+id/scrollView"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            >
+            android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/txtCalculo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textColor="@color/txtCalculo"
-                android:text="@string/txtCalc"
-                tools:layout_editor_absoluteX="310dp"
-                tools:layout_editor_absoluteY="16dp" />
+                android:orientation="horizontal"
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/txtCalculo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/txtCalculo"
+                    android:text="@string/txtCalc"
+                    tools:layout_editor_absoluteX="310dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"

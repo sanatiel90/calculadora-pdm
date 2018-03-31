@@ -2,10 +2,9 @@ package com.example.sanatiel.calculadora
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 //import kotlinx.android.synthetic.main.activity_main.* //BUG
@@ -22,11 +21,6 @@ class MainActivity : AppCompatActivity() {
         var numeroNovo:Int = 0
         var resultado:Boolean = false
         var strCalculo = ""
-
-       /* findViewById<Button>(R.id.bt9).setOnClickListener { show() }
-        bt8.setOnClickListener { Toast.makeText(this,"ocho",Toast.LENGTH_LONG).show() }
-         Toast.makeText(this,"nUM 9",Toast.LENGTH_LONG).show()
-        */
 
         val bt1 = findViewById<Button>(R.id.bt1)
         val bt2 = findViewById<Button>(R.id.bt2)
@@ -220,6 +214,20 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.mnAbout){
+            Toast.makeText(this,"Desenvolvido por Sanatiel Barros",Toast.LENGTH_SHORT).show()
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
     fun calculaOperacao(op:String, numAtual:Int, numNovo:Int):Int{
         var result:Int = 0
         when(op){
@@ -231,6 +239,8 @@ class MainActivity : AppCompatActivity() {
         }
        return result
     }
+
+
 
 
     fun atribuiNumero(editAtual:String, num: String):String{
