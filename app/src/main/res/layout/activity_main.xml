@@ -43,6 +43,8 @@
             </LinearLayout>
         </ScrollView>
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -64,6 +66,57 @@
                 android:textColor="@color/editTxtFont"
                 android:textSize="@dimen/editTxtFont" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+
+
+            <Button
+                android:id="@+id/btClear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btHeight"
+                android:layout_gravity="center"
+                android:text="@string/btClear"
+                android:textSize="@dimen/btFontSize" />
+
+
+            <Button
+                android:id="@+id/btPercent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btHeight"
+                android:layout_gravity="center"
+                android:text="@string/btPercent"
+                android:textSize="@dimen/btFontSize" />
+
+
+
+            <Button
+                android:id="@+id/btBack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btHeight"
+                android:layout_gravity="center"
+                android:text="@string/btBack"
+                android:textSize="@dimen/btFontSize" />
+
+
+            <Button
+                android:id="@+id/btDiv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btHeight"
+                android:layout_gravity="center"
+                android:text="@string/btDiv"
+                android:textSize="@dimen/btFontSize" />
 
         </LinearLayout>
 
@@ -105,13 +158,17 @@
                 android:textSize="@dimen/btFontSize" />
 
             <Button
-                android:id="@+id/btClear"
+                android:id="@+id/btMult"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/btHeight"
                 android:layout_gravity="center"
-                android:text="@string/btClear"
+                android:text="@string/btMult"
                 android:textSize="@dimen/btFontSize" />
+
+
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -209,14 +266,17 @@
             android:orientation="horizontal"
             android:layout_marginTop="5dp">
 
+
             <Button
-                android:id="@+id/bt12"
+                android:id="@+id/btSinal"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/btHeight"
                 android:layout_gravity="center"
-                android:text=","
+                android:text="@string/btSinal"
                 android:textSize="@dimen/btFontSize" />
+
+
 
             <Button
                 android:id="@+id/bt0"
@@ -226,6 +286,16 @@
                 android:layout_gravity="center"
                 android:text="@string/bt0"
                 android:textSize="@dimen/btFontSize" />
+
+            <Button
+                android:id="@+id/btDecim"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btHeight"
+                android:layout_gravity="center"
+                android:text="@string/btDecim"
+                android:textSize="@dimen/btFontSize" />
+
 
 
             <Button
@@ -237,62 +307,9 @@
                 android:text="@string/btAux"
                 android:textSize="@dimen/btFontSize" />
 
-            <Button
-                android:id="@+id/btDiv"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/btHeight"
-                android:layout_gravity="center"
-                android:text="@string/btDiv"
-                android:textSize="@dimen/btFontSize" />
-
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
 
-
-
-            <Button
-                android:id="@+id/bt13"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/btHeight"
-                android:layout_gravity="center"
-                android:text=""
-                android:textSize="@dimen/btFontSize" />
-
-            <Button
-                android:id="@+id/bt14"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/btHeight"
-                android:layout_gravity="center"
-                android:text=""
-                android:textSize="@dimen/btFontSize" />
-
-            <Button
-                android:id="@+id/bt15"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/btHeight"
-                android:layout_gravity="center"
-                android:text="--"
-                android:textSize="@dimen/btFontSize" />
-
-            <Button
-                android:id="@+id/btMult"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/btHeight"
-                android:layout_gravity="center"
-                android:text="@string/btMult"
-                android:textSize="@dimen/btFontSize" />
-        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

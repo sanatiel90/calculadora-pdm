@@ -18,6 +18,10 @@
     <string name="btClear">CE</string>
     <string name="txtCalc"></string>
     <string name="about">Sobre</string>
+    <string name="btBack">--</string>
+    <string name="btPercent">%</string>
+    <string name="btDecim">,</string>
+    <string name="btSinal">+-</string>
 
 
 </resources>
